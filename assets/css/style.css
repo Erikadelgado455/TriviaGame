@@ -1,64 +1,20 @@
-   .jumbotron {
-    box-sizing: border-box;
-    height: 600px;
-    background-color: rgba(0, 0, 0, 0);
-  }
+body{
+  font-family: 'Permanent Marker', cursive;
+  background-image: url("../images/francis\ of\ the\ filth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+h1{
+  font-family: 'Permanent Marker', cursive;
+  font-weight: bolder
+}
+.grid{
+  width:600px;
+  height: 500px;
+  margin:0 auto;
+  background-color: indianred;
+  padding: 10px 50px 50px 50px;
+  border-radius: 50px;
+  border: 2px dotted black;
   
-  .main-button-container {
-    margin-top: 175px;
-    max-width: 610px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  
-  .timer-p {
-    margin-top: 40px;
-  }
-  
-  .answer:hover {
-    background: pink;
-  }
-  
-  .answer {
-    padding-top: 7px;
-    height: 45px;
-    color: black;
-    padding-left: 14px;
-    background-color: white;
-    border-radius: 4px;
-  }
-  
-  .img-wrong {
-    margin-top: 40px;
-  }
-  
-  .first-answer {
-    margin-top: 40px;
-  }
-  
-  .reset-button {
-    margin-top: 40px;
-  }
-  
-  .summary-correct {
-    margin-top: 40px;
-  }
-  
-  body {
-    background-image: url("../images/francis\ of\ the\ filth.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    font-family: 'Amatic SC', cursive;
-  }
-  .btn-primary {
-    background-color: indianred;
-  }
-  h1{
-      font-weight: bold;
-  }
-  .text-center{
-    font-size: 25px;
-    color:white;
-    font-weight: bold;
-  }
+}
