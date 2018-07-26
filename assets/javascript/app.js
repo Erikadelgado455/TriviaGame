@@ -17,7 +17,7 @@ function question(text,options,answer){
 
 }
 
-Triviaquiz.$(correctanswers)=function(option){
+function answer(option){
     return option === this.answer;
 }
 function Triviaquiz(questions){
@@ -25,20 +25,20 @@ function Triviaquiz(questions){
     this.questions=questions;
     this.questionindex=0;
 }
-Triviaquiz.$(questionindex)=function(){
+function Triviaquiz (questionindex){
     return this.questions[this.questionindex]
 }
-Triviaquiz.$(ended)=function(){
+function Triviaquiz(ended){
     return this.questions.length === this.questionindex;
 }
-Triviaquiz.$(guess)=function(answer) {
+function Triviaquiz(answer) {
     this.questionindex++;
     if (this.questionindex().correctanswers(answer)) {
         this.correctanswers++;
     }
 }
 function populate(){
-    if (Triviaquiz.ended()){
+    if(ended){
         correctanswers();
     }
     else{
@@ -49,15 +49,7 @@ function populate(){
 
 }
 
-var questions=[
-    new Question ("What was the address Dory was looking for on Finding Nemo?",["P. Sherman 42 Wallaby Way Sidney", "124 Conch St.", "12 Grimmauld Place", "420 Paper St."],"P. Sherman 42 Wallaby Way Sidney"),
-    new Question ("Who played the character of Edward Scissorhands?",["Brad Pitt","Johnny Depp","Charlie Sheen","Tom Cruise"],"Johnny Depp"),
-    new Question("The 2014 film Maleficent is based on which story?",["Cinderella", "Snow White", "Sleeping Beauty", "Rapunzel"],"Sleeping Beauty"),
-    new Question("Who was Naruto's first sensei?",["Kakashi Sensei","Sarutobi Sensei","Iruka Sensei","Minato Sensei"],"Iruka Sensei"),
-    new Question("Who played Frodo Baggins in Lord Of The Rings?",["Daniel Radcliffe", "Macaulay Culkin", "Sean Astin", "Elijah Wood"],"Elijah Wood"),
-    new Question("What year did 'Thriller' come out?",["1982","1980","1985","1987"],"1982"),
-    new Question("What actor plays the role of Wolverine in X-men?",["Dwayne Johnson", "Hugh Jackman", "Jason Mamoa", "Ben Affleck"],"Hugh Jackman"),
-    new Question("What actor plays the role of Wolverine in X-men?", "On the TV sitcom 'Its Always sunny in Philadelphia' who says the iconic line 'May i offer you a nice egg in this trying time?' ?",["Charlie","Dee","Mac","Frank"],"Frank"),
+var questions=[("What was the address Dory was looking for on Finding Nemo?",["P. Sherman 42 Wallaby Way Sidney", "124 Conch St.", "12 Grimmauld Place", "420 Paper St."],"P. Sherman 42 Wallaby Way Sidney"),("Who played the character of Edward Scissorhands?",["Brad Pitt","Johnny Depp","Charlie Sheen","Tom Cruise"],"Johnny Depp"),("The 2014 film Maleficent is based on which story?",["Cinderella", "Snow White", "Sleeping Beauty", "Rapunzel"],"Sleeping Beauty"),("Who was Naruto's first sensei?",["Kakashi Sensei","Sarutobi Sensei","Iruka Sensei","Minato Sensei"],"Iruka Sensei"),("Who played Frodo Baggins in Lord Of The Rings?",["Daniel Radcliffe", "Macaulay Culkin", "Sean Astin", "Elijah Wood"],"Elijah Wood"),("What year did 'Thriller' come out?",["1982","1980","1985","1987"],"1982"),("What actor plays the role of Wolverine in X-men?",["Dwayne Johnson", "Hugh Jackman", "Jason Mamoa", "Ben Affleck"],"Hugh Jackman"),("What actor plays the role of Wolverine in X-men?", "On the TV sitcom 'Its Always sunny in Philadelphia' who says the iconic line 'May i offer you a nice egg in this trying time?' ?",["Charlie","Dee","Mac","Frank"],"Frank"),
 ]
 var Triviaquiz=questions;
 populate();
