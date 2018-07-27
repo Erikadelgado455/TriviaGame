@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
 <body>
@@ -17,13 +17,8 @@
         <h1>Trivia Quiz Game!</h1>
         <span id="timer"></span>
         <hr style="margin-bottom: 20px">
-        <p id="question"></p>
-        <ul id="Buttons">
-            <li><button id="btn1"><span id="answer1"></span></button></li>
-            <li><button id="btn2"><span id="answer2"></span></button></li>
-            <li><button id="btn3"><span id="answer3"></span></button></li>
-            <li><button id="btn4"><span id="answer4"></span></button></li>
-        </ul>
+        <button id="submit-button">Show Answers</button>
+        <div id "show-results"></div>
         <hr style="margin-top: 50px">
         <footer>
             <p id="progress">Question 1 Of 10</p>
